@@ -25,3 +25,7 @@ Colors and layout are in `styles.css`.
 ## Please don't
 
 Don't add anything private to this repo, such as passwords, member lists or signed waivers. The site should never collect waiver information. Those forms stay on Central Rock Gym's website.
+
+## Publishing from a computer
+
+Commit on `main`, then run `./publish.sh`. It pushes, waits for Vercel, and only finishes once the live site matches your commit. Please don't run `vercel deploy` by hand on top of it.
