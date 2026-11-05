@@ -126,13 +126,23 @@ h1, h2, h3, p { margin: 0; }
 
 /* About */
 .about { padding: 64px 0; }
-.about-in { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: end; }
+.about-in { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
 .about .big { color: var(--blue); margin-bottom: 14px; }
 .about p { color: var(--muted); }
-.team { margin: 0; }
-.team div { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); }
-.team dt { font-weight: 700; }
-.team dd { margin: 0; color: var(--muted); }
+.team { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px 14px; }
+.team li { text-align: center; }
+.team img, .initials { display: block; width: 96px; height: 96px; margin: 0 auto 8px; }
+.team img { border-radius: 50%; object-fit: cover; }
+.initials {
+  display: grid; place-items: center; font: 400 1.7rem/1 var(--display); color: #fff;
+  border-radius: 58% 42% 55% 45% / 50% 60% 40% 50%;
+  box-shadow: inset -5px -6px 0 rgba(0, 0, 0, 0.16);
+}
+.initials.red { background: var(--red); }
+.initials.yellow { background: var(--yellow); color: var(--deep); }
+.initials.green { background: var(--green); }
+.team b { display: block; line-height: 1.25; }
+.team small { display: block; font-size: 15px; color: var(--muted); }
 
 /* Footer */
 footer { padding: 36px 0; background: var(--blue); color: #fff; }
@@ -166,6 +176,7 @@ footer { padding: 36px 0; background: var(--blue); color: #fff; }
   .gym .info { grid-column: 1; grid-row: auto; margin-top: 4px; text-align: left; }
   .first-in, .about-in { grid-template-columns: 1fr; gap: 20px; }
   .about-in { gap: 28px; }
+  .team { grid-template-columns: repeat(2, 1fr); }
 
   .sticky {
     position: fixed; left: 12px; right: 12px; bottom: 10px; z-index: 10; display: block;
