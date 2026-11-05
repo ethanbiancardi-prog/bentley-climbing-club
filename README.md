@@ -6,11 +6,9 @@ This site helps new members join on Campus Groups and finish their Central Rock 
 
 ## Making an edit
 
-1. Open `index.html` on GitHub and click the pencil icon.
-2. Make your change.
-3. Click **Commit changes**.
+Edit the files, commit on `main`, then run `./publish.sh`. It pushes to GitHub, deploys to Vercel, and only reports success once the live site matches your commit.
 
-The live site updates automatically about a minute later.
+Commits made on GitHub don't go live until someone runs `./publish.sh`, because GitHub-triggered deploys are turned off. GitHub's notice to Vercel has arrived more than 25 minutes late, and a late deploy can put an old version back live. To turn them back on for other editors, delete `vercel.json`.
 
 ## What to keep up to date
 
@@ -25,7 +23,3 @@ Colors and layout are in `styles.css`.
 ## Please don't
 
 Don't add anything private to this repo, such as passwords, member lists or signed waivers. The site should never collect waiver information. Those forms stay on Central Rock Gym's website.
-
-## Publishing from a computer
-
-Commit on `main`, then run `./publish.sh`. It pushes, waits for Vercel, and only finishes once the live site matches your commit. Please don't run `vercel deploy` by hand on top of it.
