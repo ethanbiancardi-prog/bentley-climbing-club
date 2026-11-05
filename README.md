@@ -16,9 +16,9 @@ The live site updates automatically about a minute later.
 
 Search `index.html` for these sections:
 
-- **Leadership:** update the officers each year.
+- **The club:** update the officers each year.
 - **Where we climb:** gyms, addresses and the weekly session.
-- **Fill out your CRG forms:** check the links still work, since CRG can change them.
+- **Do your CRG forms:** check the links still work, since CRG can change them.
 
 Colors and layout are in `styles.css`.
 
