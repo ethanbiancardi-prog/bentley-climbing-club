@@ -30,6 +30,18 @@ h1, h2, h3, p { margin: 0; }
   letter-spacing: 0.01em;
 }
 
+/* Next event banner */
+.next { background: var(--deep); color: #fff; }
+.next-in { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-top: 12px; padding-bottom: 12px; }
+.next p { font-size: 16px; line-height: 1.4; }
+.next-tag {
+  display: inline-block; margin-right: 6px; padding: 1px 8px; border-radius: 4px;
+  background: var(--yellow); color: var(--deep); font-size: 13px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.next-info { display: block; margin-top: 3px; color: #d3def0; }
+.next .btn { flex: none; padding: 8px 18px; }
+
 /* Hero */
 .hero { position: relative; overflow: hidden; background: var(--blue); color: #fff; }
 .hero-in { position: relative; padding-top: 44px; padding-bottom: 72px; }
@@ -157,6 +169,8 @@ footer { padding: 36px 0; background: var(--blue); color: #fff; }
 .sticky { display: none; }
 
 @media (max-width: 760px) {
+  .next-in { flex-direction: column; align-items: stretch; gap: 10px; }
+  .next .btn { text-align: center; }
   body { font-size: 17px; padding-bottom: 66px; }
   .hero-in { padding-top: 28px; padding-bottom: 52px; }
   .logo { width: 96px; height: 96px; margin-bottom: 20px; }

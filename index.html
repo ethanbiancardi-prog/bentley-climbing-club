@@ -3,8 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bentley Climbing Club</title>
-<meta name="description" content="All levels of experience are welcome. Join the Bentley Climbing Club, fill out your Central Rock Gym forms, and come climb.">
+<title>Bentley Climbing Club | Bentley University Rock Climbing</title>
+<meta name="description" content="The Bentley Climbing Club is Bentley University's rock climbing club in Waltham, MA. All levels welcome. Join, fill out your Central Rock Gym waiver, and come climb.">
+<link rel="canonical" href="https://bentley-climbing-club.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bentley Climbing Club">
+<meta property="og:title" content="Bentley Climbing Club">
+<meta property="og:description" content="Bentley University's rock climbing club. All levels welcome.">
+<meta property="og:url" content="https://bentley-climbing-club.vercel.app/">
+<meta property="og:image" content="https://bentley-climbing-club.vercel.app/assets/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "Bentley Climbing Club",
+  "alternateName": ["Bentley Rock Climbing Club", "BCC"],
+  "url": "https://bentley-climbing-club.vercel.app/",
+  "logo": "https://bentley-climbing-club.vercel.app/assets/logo.png",
+  "email": "rockclimbing@bentley.edu",
+  "sport": "Rock climbing",
+  "description": "Student rock climbing club at Bentley University. All levels welcome.",
+  "parentOrganization": {"@type": "CollegeOrUniversity", "name": "Bentley University"},
+  "address": {"@type": "PostalAddress", "streetAddress": "175 Forest St", "addressLocality": "Waltham", "addressRegion": "MA", "postalCode": "02452", "addressCountry": "US"},
+  "sameAs": ["https://www.instagram.com/bentleyrockclimbing/", "https://bentley.campusgroups.com/Climbing"]
+}
+</script>
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +37,13 @@
 <body>
 
 <main>
+
+  <aside class="next" id="next-event" data-ends="2026-11-08T18:20:00-05:00" aria-label="Next event">
+    <div class="wrap next-in">
+      <p><span class="next-tag">Next event</span> <b>Indoor Climbing #2</b> <span class="next-info">Sun, Nov 8, 2:15 PM at CRG Stoneham. $5, limited spots. Sign in to Campus Groups to see it.</span></p>
+      <a class="btn yellow" href="https://bentley.campusgroups.com/w/YmVudGxleTpIdWI6MjQ2ODY=/_/events/YmVudGxleTpFdmVudDoyMjYwMDMy">Sign up</a>
+    </div>
+  </aside>
 
   <section class="hero" id="top">
     <div class="holds" aria-hidden="true">
@@ -158,6 +188,12 @@
 </footer>
 
 <a class="sticky" href="#forms">Fill out your waiver</a>
+
+<script>
+  // Hides the event banner once the event is over.
+  const nextEvent = document.getElementById("next-event");
+  if (nextEvent && Date.now() > Date.parse(nextEvent.dataset.ends)) nextEvent.remove();
+</script>
 
 </body>
 </html>
