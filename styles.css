@@ -128,6 +128,12 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* First time */
+.ride { padding: 60px 0; }
+.ride-in { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: start; }
+.ride .big { color: var(--blue); }
+.ride p { max-width: 34em; margin: 0 0 18px; color: var(--muted); font-size: 1.1rem; }
+.ride p.fine { margin: 14px 0 0; font-size: 15px; }
+
 .first { padding: 60px 0; background: var(--yellow); color: var(--deep); }
 .first-in { display: grid; grid-template-columns: 1fr 1.6fr; gap: 40px; align-items: start; }
 .first ul { list-style: none; margin: 0; padding: 0; }
@@ -188,7 +194,8 @@ footer { padding: 36px 0; background: var(--blue); color: #fff; }
 
   .gym { grid-template-columns: 1fr; }
   .gym .info { grid-column: 1; grid-row: auto; margin-top: 4px; text-align: left; }
-  .first-in, .about-in { grid-template-columns: 1fr; gap: 20px; }
+  .first-in, .about-in, .ride-in { grid-template-columns: 1fr; gap: 20px; }
+  .ride .actions .btn { width: 100%; text-align: center; }
   .about-in { gap: 28px; }
   .team { grid-template-columns: repeat(2, 1fr); }
 
